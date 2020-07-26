@@ -1,0 +1,52 @@
+[user]
+    name = Michael Nygard
+    email = mtnygard@gmail.com
+    initials = mn
+    signingkey = 210B133FF4AA98394742B6C901C124289E0E3C98
+
+[color]
+    ui = true
+    branch = auto
+    diff = auto
+    status = auto
+
+[alias]
+    st = status
+    visual = !gitk
+    ci = commit
+    co = checkout
+    st = status
+    br = branch
+    di = diff
+
+    # show difference between the HEAD and the index
+    staged = diff --cached
+
+    # show difference between working tree and the index
+    unstaged = diff
+
+    # show staged and unstaged changes (what would be committed with "git commit -a")
+    both = diff HEAD
+
+[core]
+    excludesfile = $HOME/.gitignore
+	autocrlf = false
+
+[alias]
+    ribbon = tag --force _ribbon origin/master
+    catchup = log --patch --reverse --topo-order _ribbon..origin/master
+    eeyup = pull
+
+[push]
+    default = simple
+
+[filter "media"]
+    clean = git media clean %f
+    smudge = git media smudge %f
+    required = true
+
+[branch]
+    autosetuprebase = always
+
+[pull]
+	rebase = false
