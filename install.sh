@@ -8,6 +8,6 @@ replace() {
 mkdir -p ~/.clojure
 mkdir -p ~/.m2
 
-replace ~/.gitconfig         dotfiles/gitconfig
-replace ~/.clojure/deps.edn  dotfiles/clojure/deps.edn
-replace ~/.m2/settings.xml   dotfiles/maven/settings.xml
+replace ~/.gitconfig         ~/dotfiles/gitconfig
+replace ~/.clojure/deps.edn  ~/dotfiles/clojure/deps.edn
+replace ~/.m2/settings.xml   ~/dotfiles/maven/settings.xml
